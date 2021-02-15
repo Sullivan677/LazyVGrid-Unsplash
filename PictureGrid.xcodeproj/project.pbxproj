@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		7509FE3D25DAABC2000F64A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7509FE3C25DAABC2000F64A1 /* Preview Assets.xcassets */; };
 		7509FE4825DAABC2000F64A1 /* PictureGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509FE4725DAABC2000F64A1 /* PictureGridTests.swift */; };
 		7509FE5325DAABC2000F64A1 /* PictureGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509FE5225DAABC2000F64A1 /* PictureGridUITests.swift */; };
+		7509FE6425DAB0A0000F64A1 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509FE6325DAB0A0000F64A1 /* Picture.swift */; };
+		7509FE6925DAB340000F64A1 /* pictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509FE6825DAB340000F64A1 /* pictureViewModel.swift */; };
+		7509FE7225DAB437000F64A1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7509FE7125DAB437000F64A1 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		7509FE4E25DAABC2000F64A1 /* PictureGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7509FE5225DAABC2000F64A1 /* PictureGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGridUITests.swift; sourceTree = "<group>"; };
 		7509FE5425DAABC2000F64A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7509FE6325DAB0A0000F64A1 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		7509FE6825DAB340000F64A1 /* pictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pictureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7509FE7225DAB437000F64A1 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 			children = (
 				7509FE3525DAABC2000F64A1 /* PictureGridApp.swift */,
 				7509FE3725DAABC2000F64A1 /* ContentView.swift */,
+				7509FE6325DAB0A0000F64A1 /* Picture.swift */,
+				7509FE6825DAB340000F64A1 /* pictureViewModel.swift */,
 				7509FE3925DAABC2000F64A1 /* Assets.xcassets */,
 				7509FE3E25DAABC2000F64A1 /* Info.plist */,
 				7509FE3B25DAABC2000F64A1 /* Preview Content */,
@@ -146,6 +154,9 @@
 			dependencies = (
 			);
 			name = PictureGrid;
+			packageProductDependencies = (
+				7509FE7125DAB437000F64A1 /* SDWebImageSwiftUI */,
+			);
 			productName = PictureGrid;
 			productReference = 7509FE3225DAABC2000F64A1 /* PictureGrid.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 7509FE2925DAABC1000F64A1;
+			packageReferences = (
+				7509FE7025DAB437000F64A1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 7509FE3325DAABC2000F64A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7509FE6425DAB0A0000F64A1 /* Picture.swift in Sources */,
+				7509FE6925DAB340000F64A1 /* pictureViewModel.swift in Sources */,
 				7509FE3825DAABC2000F64A1 /* ContentView.swift in Sources */,
 				7509FE3625DAABC2000F64A1 /* PictureGridApp.swift in Sources */,
 			);
@@ -580,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7509FE7025DAB437000F64A1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7509FE7125DAB437000F64A1 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7509FE7025DAB437000F64A1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7509FE2A25DAABC1000F64A1 /* Project object */;
 }
